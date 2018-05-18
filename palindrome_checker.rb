@@ -6,7 +6,7 @@ require 'pry'
 #if not say no
 #erase and start again
 
-def start
+def start 
   puts 'Welcome to the Palindrome checker'
   puts 'Examples are "Racecar", "Mom", and "Tacocat"'
   puts 'Check if your word is a palindrome by entering it below'
