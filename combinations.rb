@@ -5,22 +5,43 @@ require 'pry'
 # output those combinations to the screen
 
 
-def combo(array, combos)
-  puts array if combos == array.size
-  (combos..array.size - 1).each do |switch|
-    array[combos], array[switch] = array[switch], array[combos]
-    combo(array, combos+1)
-    array[combos], array[switch] = array[switch], array[combos]
+def combo(str, combos = 0)
+  puts str if combos == str.size
+  (combos..str.size - 1).each do |switch|
+    str[combos], str[switch] = str[switch], str[combos]
+    combo(str, combos+1)
+    str[combos], str[switch] = str[switch], str[combos]
   end
 end
 
-combo('dad', combos = 0)
+combo('dog')
 
-# def permutations(array, index=0)
-#   p array if index == array.size
-#   (index..array.size-1).each do |swap|
-#     array[index], array[swap] = array[swap], array[index]
-#     permutations(array, index+1)
-#     array[index], array[swap] = array[swap], array[index]
+
+# def brain_teaser(word)
+#   a = 0
+#   b = 0
+#   while a < word.length
+#     b = a
+#     while b < word.length
+#       print (word[a..b])
+#       print (", ")
+#       b += 1
+#     end
+#     a += 1
+
+#   end
+#   word = word.reverse
+#   a = 0
+#   b = 0
+#   while a < word.length
+#     b = a
+#     while b < word.length
+#       print (word[a..b])
+#       print (", ")
+#       b += 1
+#     end
+#     a += 1
 #   end
 # end
+
+# brain_teaser("dog")
