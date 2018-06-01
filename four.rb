@@ -10,7 +10,7 @@ def magic
       puts "...and Four is the magic number"
       break
     else 
-      input = input.length.to_words.capitalize
+      input = input.gsub(' ', '').length.to_words.capitalize
     end
   end
 end
